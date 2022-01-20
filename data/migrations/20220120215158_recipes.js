@@ -4,7 +4,7 @@ exports.up = async function(knex) {
     .createTable('recipes', table => {
         table.increments('recipe_id')
         table.string('recipe_name', 128).notNullable().unique()
-        table.datetime('created_at')
+        table.dateTime('created_at')
     })
     .createTable('steps', table => {
         table.increments('step_id')
@@ -38,7 +38,7 @@ exports.up = async function(knex) {
             .inTable('ingredients')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
-        table.float('ingredient_amount').notNullable()
+        table.integer('ingredient_amount').notNullable()
     })
 };
 
