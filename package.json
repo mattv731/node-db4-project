@@ -1,9 +1,30 @@
 {
   "name": "node-db4-project",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "server": "nodemon index.js",
+    "ketchup": "git fetch && git reset --hard origin/lecture",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BloomInstituteOfTechnology/node-db4-project.git"
+  },
+  "description": "Your assignment page on Canvas should contain instructions for submitting this project. If you are still unsure, reach out to School Staff.",
+  "bugs": {
+    "url": "https://github.com/BloomInstituteOfTechnology/node-db4-project/issues"
+  },
+  "homepage": "https://github.com/BloomInstituteOfTechnology/node-db4-project#readme",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "knex": "^0.95.15",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.2"
   }
 }
